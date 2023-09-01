@@ -1,20 +1,20 @@
 const swaggerJsdoc = require('swagger-jsdoc');
 const yaml = require('yamljs');
 
-// Define Swagger options
+
 const options = {
   swaggerDefinition: {
-    openapi: '3.0.0', // Specify the API version
+    openapi: '3.0.0', 
     info: {
-      title: 'Your API Documentation', // Title of your API
-      version: '1.0.0', // Version of your API
+      title: 'API Documentation', 
+      version: '1.0.0', 
       description: 'API documentation for your Express.js application',
     },
   },
-  apis: ['./routes/*.js'], // Path to your route files
+  apis: ['./routes/*.js'], 
 };
 
-// Generate Swagger specification
+
 const specs = swaggerJsdoc(options);
 
 module.exports = specs;
